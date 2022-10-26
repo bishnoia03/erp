@@ -95,17 +95,24 @@ div::-webkit-scrollbar-thumb:hover {
 }
 
 form input,
-form textarea {
+form textarea,form select {
     display: block;
     width: 100%;
     padding: 12px 20px;
     border: none;
     border-radius: 22px;
 }
-
+/* form select {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 22px;
+} */
 form input:focus,
 form button:focus,
 form textarea:focus,
+form select:focus,
 .bootstrap-select .dropdown-toggle:focus,
 .bootstrap-select>select.mobile-device:focus+.dropdown-toggle .form-control:focus {
     transition: 0.3s ease-in !important;
@@ -117,7 +124,7 @@ form textarea:focus,
 .bootstrap-select>.dropdown-toggle.bs-placeholder,
 .bootstrap-select>.dropdown-toggle.bs-placeholder:active,
 .bootstrap-select>.dropdown-toggle.bs-placeholder:focus,
-.bootstrap-select>.dropdown-toggle.bs-placeholder:hove {
+.bootstrap-select>.dropdown-toggle.bs-placeholder:hover {
     color: #0f25cb !important;
 }
 
