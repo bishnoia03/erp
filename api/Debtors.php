@@ -45,7 +45,7 @@ class Debtors
     }
 
     // **insert new debtor in db
-    public function insertDebtor($debtorName, $debtorMobile, $debtorEmail, $debtorAddress, $userId = "")
+    public function insertDebtor($debtorName,$debtorMobileNo,$debtorEmail,$debtorAddress,$fathername,$mothername,$gender,$dob,$aadhar,$familyid,$caste,$maritalstatus, $userId = "")
     {
         if ($userId == "") $userId = $_SESSION["user_auth_id"];
         $selectQuery = "SELECT COUNT(*) AS total FROM debtors WHERE DEBTOR_MOBILE='$debtorMobile'";
@@ -55,7 +55,7 @@ class Debtors
                 return -1;
             }
         }
-        $sql = "INSERT INTO debtors(DEBTOR_NAME,DEBTOR_MOBILE,DEBTOR_EMAIL,DEBTOR_ADDRESS,USER_ID)VALUES('$debtorName','$debtorMobile','$debtorEmail','$debtorAddress','$userId')";
+        $sql = "INSERT INTO debtors(DEBTOR_NAME,DEBTOR_MOBILE,DEBTOR_EMAIL,DEBTOR_ADDRESS,USER_ID,fatherName,motherName,gender,DOB,aadhar,familyId,category,maritalStatus)VALUES('$debtorName','$debtorMobileNo','$debtorEmail','$debtorAddress','$userId','$fathername','$mothername','$gender','$dob','$aadhar','$familyid','$caste','$maritalstatus')";
         return $this->conn->query($sql);
     }
 
